@@ -119,3 +119,36 @@ INSERT INTO fct_customer_sales (cust_id, prod_sku_id, order_date, order_value, o
 ('C276', 'P478', '2021-12-31', 700, 'O951'),
 ('C283', 'P486', '2022-01-03', 420, 'O963'),
 ('C281', 'P489', '2022-01-11', 189, 'O991');
+
+-- Clear existing data
+DELETE FROM facebook_web_log;
+
+-- Insert web log data
+INSERT INTO facebook_web_log (user_id, timestamp, action) VALUES
+(0, '2019-04-25 13:30:15', 'page_load'),
+(0, '2019-04-25 13:30:18', 'page_load'),
+(0, '2019-04-25 13:30:40', 'scroll_down'),
+(0, '2019-04-25 13:30:45', 'scroll_up'),
+(0, '2019-04-25 13:31:10', 'scroll_down'),
+(0, '2019-04-25 13:31:25', 'scroll_down'),
+(0, '2019-04-25 13:31:40', 'page_exit'),
+(1, '2019-04-25 13:40:00', 'page_load'),
+(1, '2019-04-25 13:40:10', 'scroll_down'),
+(1, '2019-04-25 13:40:15', 'scroll_down'),
+(1, '2019-04-25 13:40:20', 'scroll_down'),
+(1, '2019-04-25 13:40:25', 'scroll_down'),
+(1, '2019-04-25 13:40:30', 'scroll_down'),
+(1, '2019-04-25 13:40:35', 'page_exit'),
+(2, '2019-04-25 13:41:21', 'page_load'),
+(2, '2019-04-25 13:41:30', 'scroll_down'),
+(2, '2019-04-25 13:41:35', 'scroll_down'),
+(2, '2019-04-25 13:41:40', 'scroll_up'),
+(1, '2019-04-26 11:15:00', 'page_load'),
+(1, '2019-04-26 11:15:10', 'scroll_down'),
+(1, '2019-04-26 11:15:20', 'scroll_down'),
+(1, '2019-04-26 11:15:25', 'scroll_up'),
+(1, '2019-04-26 11:15:35', 'page_exit'),
+(0, '2019-04-28 14:30:15', 'page_load'),
+(0, '2019-04-28 14:30:10', 'page_load'),
+(0, '2019-04-28 13:30:40', 'scroll_down'),
+(0, '2019-04-28 15:31:40', 'page_exit');
