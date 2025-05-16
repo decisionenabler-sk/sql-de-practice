@@ -147,11 +147,9 @@ INSERT IGNORE INTO facebook_web_log (user_id, timestamp, action) VALUES
 (0, '2019-04-28 13:30:40', 'scroll_down'),
 (0, '2019-04-28 15:31:40', 'page_exit');
 
--- Clear existing data
-DELETE FROM sf_transactions;
 
 -- Insert transactions data
-INSERT INTO sf_transactions (id, created_at, transaction_value, purchase_id) VALUES
+INSERT IGNORE INTO sf_transactions (id, created_at, transaction_value, purchase_id) VALUES
 (1, '2019-01-01', 172692, 43),
 (2, '2019-01-05', 177194, 36),
 (3, '2019-01-09', 109513, 30),
