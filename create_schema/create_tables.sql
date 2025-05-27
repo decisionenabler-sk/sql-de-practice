@@ -35,3 +35,24 @@ CREATE TABLE IF NOT EXISTS sf_transactions (
     transaction_value BIGINT,
     purchase_id BIGINT
 );
+
+-- Create contracts table
+CREATE TABLE IF NOT EXISTS contracts (
+    customer_id INTEGER,
+    num_seats INTEGER,
+    yearly_seat_cost INTEGER
+);
+
+-- Create customers table
+CREATE TABLE IF NOT EXISTS customers (
+    customer_id INTEGER,
+    name VARCHAR(100),
+    employee_count INTEGER CHECK (employee_count BETWEEN 0 AND 100000)
+);
+
+CREATE TABLE IF NOT EXISTS fraud_score (
+    policy_num VARCHAR(10) PRIMARY KEY,
+    state CHAR(2) NOT NULL,
+    claim_cost INTEGER NOT NULL,
+    fraud_score DECIMAL(3,2) NOT NULL
+);
