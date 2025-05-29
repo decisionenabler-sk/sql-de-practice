@@ -56,3 +56,23 @@ CREATE TABLE IF NOT EXISTS fraud_score (
     claim_cost INTEGER NOT NULL,
     fraud_score DECIMAL(3,2) NOT NULL
 );
+CREATE TABLE IF NOT EXISTS sessions (
+    session_id VARCHAR(50) PRIMARY KEY,
+    user_id VARCHAR(50),
+    session_date DATE
+);
+CREATE TABLE IF NOT EXISTS order_summary (
+    order_id VARCHAR(50) PRIMARY KEY,
+    order_date DATE,
+    user_id VARCHAR(50) ,
+    order_value INTEGER
+);
+CREATE TABLE IF NOT EXISTS fact_events (
+    id VARCHAR(50) PRIMARY KEY,
+    time_id DATE,
+    user_id VARCHAR(50),
+    customer_id VARCHAR(50),
+    client_id VARCHAR(50),
+    event_type VARCHAR(50),
+    event_id INTEGER
+);
