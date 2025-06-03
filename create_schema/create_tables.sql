@@ -76,3 +76,26 @@ CREATE TABLE IF NOT EXISTS fact_events (
     event_type VARCHAR(50),
     event_id INTEGER
 );
+CREATE TABLE IF NOT EXISTS uber_request_logs (
+    request_id BIGINT,
+    request_date DATE,
+    request_status TEXT,
+    distance_to_travel DOUBLE PRECISION,
+    monetary_cost DOUBLE PRECISION,
+    driver_to_client_distance DOUBLE PRECISION
+);
+CREATE TABLE IF NOT EXISTS yelp_business (
+    business_id VARCHAR(255) PRIMARY KEY,
+    name VARCHAR(255),
+    neighborhood VARCHAR(255),
+    address VARCHAR(255),
+    city VARCHAR(255),
+    state VARCHAR(10),
+    postal_code VARCHAR(20),
+    latitude DOUBLE PRECISION,
+    longitude DOUBLE PRECISION,
+    stars DOUBLE PRECISION,
+    review_count INT,
+    is_open INT,
+    categories TEXT
+);
