@@ -99,3 +99,8 @@ CREATE TABLE IF NOT EXISTS yelp_business (
     is_open INT,
     categories TEXT
 );
+CREATE TABLE IF NOT EXISTS amazing_purchases (
+    user_id INTEGER,
+    created_at DATE,
+    purchase_amt INTEGER
+);
